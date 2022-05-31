@@ -11,6 +11,9 @@ import { RouterModule, Routes } from '@angular/router';
 import {CanactivateGuard} from "./canactivate.guard";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {HttpClientModule} from "@angular/common/http";
+
+
 
 const routes: Routes = [
   {
@@ -47,13 +50,15 @@ const routes: Routes = [
     SignupComponent,
     ProductsComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatToolbarModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        RouterModule,
+        HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
