@@ -12,14 +12,14 @@ import {CanactivateGuard} from "./canactivate.guard";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
-import { CartComponent } from './cart/cart.component';
-import { FooterComponent } from './footer/footer.component';
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
 
 const routes: Routes = [
   {
@@ -56,9 +56,7 @@ const routes: Routes = [
     SignupComponent,
     ProductsComponent,
     HeaderComponent,
-    DashboardComponent,
-    CartComponent,
-    FooterComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -69,10 +67,13 @@ const routes: Routes = [
     MatFormFieldModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
     // step 2
     RouterModule.forRoot(routes),
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    MatOptionModule,
+    MatSelectModule
 
   ],
   providers: [],
