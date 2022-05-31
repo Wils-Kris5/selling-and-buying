@@ -13,12 +13,12 @@ export class DashboardComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(){
-    this.productService.getAllProducts().subscribe({
-      next: (products) => {
-        console.log(products);
-        this.products=products;
-      }
-    })
+    // this.productService.getAllProducts().subscribe({
+    //   next: (products) => {
+    //     console.log(products);
+    //     this.products=products;
+    //   }
+    // })
   }
 
 }
