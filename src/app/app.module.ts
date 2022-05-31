@@ -11,10 +11,8 @@ import { RouterModule, Routes } from '@angular/router';
 import {CanactivateGuard} from "./canactivate.guard";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {HttpClientModule} from "@angular/common/http";
-import {MatCardModule} from "@angular/material/card";
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -51,15 +49,22 @@ const routes: Routes = [
     SignupComponent,
     ProductsComponent,
     HeaderComponent,
-    DashboardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    RouterModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    FormsModule,
+    // step 2
+    RouterModule.forRoot(routes),
+    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
