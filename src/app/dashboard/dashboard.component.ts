@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductService} from "../product.service";
+import {ProductService} from "../services/product.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -14,8 +14,9 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(){
     this.productService.getAllProducts().subscribe({
-      next: (response) => {
-        console.log(response);
+      next: (products) => {
+        console.log(products);
+        this.products=products;
       }
     })
   }

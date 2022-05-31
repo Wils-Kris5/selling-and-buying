@@ -13,6 +13,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import {MatCardModule} from "@angular/material/card";
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from "@angular/material/button";
 
 const routes: Routes = [
   {
@@ -56,14 +61,14 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatToolbarModule,
     HttpClientModule,
-    MatCardModule,
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
     FormsModule,
     // step 2
     RouterModule.forRoot(routes),
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule
 
   ],
   providers: [],

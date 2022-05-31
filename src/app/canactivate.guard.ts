@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
-import { AuthService } from '../service/auth.service';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree} from '@angular/router';
+import {Observable} from 'rxjs';
+import {AuthService} from "./services/auth.service";
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +18,9 @@ export class CanactivateGuard implements CanActivate {
 
     // 1. reading token from the localstorage
     let token = this.authService.getToken();
-    //2. verifying token
-    let isValid = this.authService.isAuthenticated(token);
-    // 3. Returning true or false
-    return isValid;
+    //2. verifying token // returning true or false
+    return this.authService.isUserAuthenticated(token);
   }
-
 }
 
 // route will be activated only when canactivate return true
