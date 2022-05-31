@@ -1,29 +1,32 @@
+
+
+
 <div class="card-container">
-  <div class="card-container" *ngFor="let product of products">
-    <mat-card>
+  <a *ngFor="let product of products">
+  <mat-card>
 
+    <mat-card-header>
+      <mat-card-title>
+        {{product.name}}
+      </mat-card-title>
 
-      <mat-card-header>
-        <mat-card-title>{{product.name}}</mat-card-title>
-        <mat-card-subtitle>${{product.price}}</mat-card-subtitle>
-      </mat-card-header>
-
-
-      <div class="description-container">
-        <mat-card-content>
-          <p>{{product.description}}</p>
-        </mat-card-content>
-      </div>
-
-      <div class="button-container">
-        <mat-card-footer>
+      <mat-card-subtitle>
+        ${{product.price}}
+        <a class="button-container">
+          <p>{{product.brand}}</p>
           <mat-card-actions>
-            <button mat-button>Add to Cart!</button>
+            <button mat-raised-button color="accent">Add to Cart</button>
           </mat-card-actions>
-        </mat-card-footer>
-      </div>
+        </a>
+      </mat-card-subtitle>
+    </mat-card-header>
 
-    </mat-card>
-  </div>
+    <div class="description-container">
+      <mat-card-content>
+        <p>{{product.description}}</p>
+      </mat-card-content>
+    </div>
+
+  </mat-card>
+  </a>
 </div>
-

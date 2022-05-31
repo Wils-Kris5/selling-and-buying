@@ -12,8 +12,16 @@ export class ProductService {
   getAllProducts(): Observable<any[]>{
     return this.httpClient.get<any[]>("http://localhost:9001/api/v1/products/")
   }
-  addNewProduct(){}
-  updateProduct(){}
-  getProductById(){}
-  deleteProduct(){}
+  addNewProduct(){
+    return this.httpClient.get<any[]>("http://localhost:9001/api/v1/products/")
+  }
+  updateProduct(){
+    return this.httpClient.get<any[]>("http://localhost:9001/api/v1/products/")
+  }
+  getProductById(){
+    return this.httpClient.get<any[]>("http://localhost:9001/api/v1/products/")
+  }
+  deleteProduct(){
+    return this.httpClient.get<any[]>("http://localhost:9001/api/v1/products/")
+  }
 }
