@@ -1,17 +1,20 @@
 .card-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: center;
+  flex-wrap: wrap;
 }
 
 .description-container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    word-break: break-word;
-    max-width: 250px;
+  display: flex;
+  word-break: break-word;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 250px;
+}
+
+.button-container{
+  position: relative;
+  bottom: 0px;
 }

@@ -18,6 +18,8 @@ import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
+import { CartComponent } from './cart/cart.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {
@@ -54,7 +56,9 @@ const routes: Routes = [
     SignupComponent,
     ProductsComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    CartComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
