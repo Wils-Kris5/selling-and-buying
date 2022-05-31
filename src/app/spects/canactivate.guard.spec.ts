@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CanactivateGuard } from './canactivate.guard';
+import { CanactivateGuard } from '../canactivate.guard';
 
 describe('CanactivateGuard', () => {
   let guard: CanactivateGuard;

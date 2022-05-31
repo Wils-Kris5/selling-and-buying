@@ -69,6 +69,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MatDialogModule,
     MatCardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
