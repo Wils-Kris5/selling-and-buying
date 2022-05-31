@@ -15,6 +15,6 @@
 }
 
 .button-container{
-  position: relative;
-  bottom: 0px;
+  position: absolute;
+  bottom: -30px;
 }
