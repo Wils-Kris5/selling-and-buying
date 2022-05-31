@@ -1,4 +1,8 @@
-<p>dashboard works!</p>
-<div>
-  <script></script>
+<div *ngFor="let product of products">
+
+  <mat-card>
+    <p>{{product.name}}</p>
+    <p>{{product.price}}</p>
+    <p>{{product.description}}</p>
+  </mat-card>
 </div>
