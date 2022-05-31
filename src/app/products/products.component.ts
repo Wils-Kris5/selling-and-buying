@@ -9,6 +9,7 @@ import {ProductService} from "../services/product.service";
 export class ProductsComponent implements OnInit {
 
   products: any[] = [];
+  toDisplay: boolean = true;
 
   constructor(private productService: ProductService) { }
 
@@ -19,5 +20,11 @@ export class ProductsComponent implements OnInit {
         this.products=products;
       }
     })
+  }
+
+  show() {
+    console.log(this.toDisplay)
+    this.toDisplay = !this.toDisplay;
+    console.log(this.toDisplay)
   }
 }
