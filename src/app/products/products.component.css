@@ -1,0 +1,23 @@
+.card-container{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+
+.description-container{
+  display: flex;
+  word-break: break-word;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.button-container{
+  position: absolute;
+  bottom: 0px;
+  left: 115px;
+}
