@@ -11,6 +11,8 @@ import { RouterModule, Routes } from '@angular/router';
 import {CanactivateGuard} from "./canactivate.guard";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -52,7 +54,17 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    FormsModule,
+    // step 2
+    RouterModule.forRoot(routes),
+    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
