@@ -1,0 +1,13 @@
+.login-functions{
+  alignment: right;
+  position: absolute;
+  right: 300px;
+}
+
+.login-link{
+  margin-left: 50px;
+}
+
+.register-link{
+  margin-left: 50px;
+}
