@@ -3,10 +3,15 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+
 }
 
-.form-container{
+.description-container{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
+    word-break: break-word;
+    max-width: 250px;
 }
