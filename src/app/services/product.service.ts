@@ -20,9 +20,9 @@ export class ProductService {
     return this.httpClient.put<Product>("http://localhost:9001/api/v1/products/",productUpdate)
   }
   getProductById(id: number): Observable<Product[]>{
-    return this.httpClient.get<Product[]>("http://localhost:9001/api/v1/products/"+id)
+    return this.httpClient.get<Product[]>("http://localhost:9001/api/v1/products/"+id.toString())
   }
-  deleteProduct(){
+  deleteProduct(product: Product){
     return this.httpClient.delete<Product>("http://localhost:9001/api/v1/products/")
   }
   moveToCart(product: Product): Observable<Product>{

@@ -37,6 +37,10 @@ export class ProductsComponent implements OnInit {
     this.toDisplay = !this.toDisplay;
   }
 
+  deleteProduct(product: Product){
+    this.productService.deleteProduct(product);
+  }
+
   addProduct() {
     if (this.product.name != "" && this.product.price != 0 && this.product.brand != "") {
       this.count+=1;
@@ -62,7 +66,7 @@ export class ProductsComponent implements OnInit {
 
   moveToCart(product: Product) {
     console.log(product)
-    this.productService.moveToCart(product)
+    this.cartService.addToCart(product).subscribe(()=>console.log("Product added to cart"))
   }
 
   updateProduct(productUpdate: Product){
