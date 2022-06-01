@@ -19,11 +19,12 @@ export class UpdateProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  edit(){
+  edit(): Product{
     this.productService.updateProduct(this.product).subscribe({
       next: ()=>{
         this.dialogRef.close()
       }
     })
+    return this.product;
   }
 }

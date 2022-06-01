@@ -12,10 +12,12 @@ export class CartService {
   constructor(private httpClient: HttpClient/*, private user: User*/) { }
 
   getCart(): Observable<Product[]>{
-    return this.httpClient.get<any[]>("http://localhost:9001/api/v1/cart/"/*+this.user.accountNumber*/);
+    return this.httpClient.get<Product[]>("http://localhost:9001/api/v1/cart/"/*+this.user.accountNumber*/);
   }
   addToCart(product: Product): Observable<Product>{
-    return this.httpClient.post<Product>("http://localhost:9001/api/v1/cart/"/*+this.user.accountNumber*/,product);
+    return this.httpClient.post<Product>("http://localhost:9001/api/v1/cart/1"/*+this.user.accountNumber*/,product);
   }
-  removeFromCart(){}
+  removeFromCart(product: Product): Observable<any> {
+    return this.httpClient.delete("http://localhost:9001/api/v1/cart/"+product.id)
+  }
 }

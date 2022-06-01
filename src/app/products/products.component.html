@@ -3,19 +3,19 @@
 <div *ngIf="toDisplay" class="forms-container">
   <mat-form-field appearance="outline">
     <mat-label>Product Name</mat-label>
-    <input matInput placeholder="Enter the product's name" [(ngModel)]="product.name">
+    <input matInput placeholder="Enter the product's name" name= "name" [(ngModel)]="product.name">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Product Price</mat-label>
-    <input matInput placeholder="Enter the product's price" [(ngModel)]="product.price">
+    <input matInput placeholder="Enter the product's price" name="price" [(ngModel)]="product.price">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Product Brand</mat-label>
-    <input matInput placeholder="Enter the product's brand" [(ngModel)]="product.brand">
+    <input matInput placeholder="Enter the product's brand" name="brand" [(ngModel)]="product.brand">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Product Description</mat-label>
-    <input matInput placeholder="Enter a description of the product" [(ngModel)]="product.description">
+    <input matInput placeholder="Enter a description of the product" name="description" [(ngModel)]="product.description">
   </mat-form-field>
 </div>
 
@@ -39,9 +39,10 @@
 <!--      <button mat-raised-button color="accent" (click)="moveToCart(this.product)">Add to Cart</button>-->
 <!--    </div>-->
 
+<!---->
 <div class="card-container">
   <a *ngFor="let product of products">
-  <mat-card class="product-card" (click)="updateProduct(product)">
+  <mat-card class="product-card">
     <mat-card-header>
       <mat-card-title>
         {{product.name}}
@@ -51,7 +52,7 @@
         <div class="button-container">
           <p>{{product.brand}}</p>
           <mat-card-actions>
-            <button mat-raised-button color="accent" (click)="moveToCart(this.product)">Add to Cart</button>
+            <button mat-raised-button color="accent" (click)="moveToCart(product)">Add to Cart</button>
           </mat-card-actions>
         </div>
       </mat-card-subtitle>
