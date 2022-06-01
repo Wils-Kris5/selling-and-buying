@@ -3,19 +3,19 @@
 <div *ngIf="toDisplay" class="forms-container">
   <mat-form-field appearance="outline">
     <mat-label>Product Name</mat-label>
-    <input matInput placeholder="Enter the product's name">
+    <input matInput placeholder="Enter the product's name" [(ngModel)]="product.name">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Product Price</mat-label>
-    <input matInput placeholder="Enter the product's price">
+    <input matInput placeholder="Enter the product's price" [(ngModel)]="product.price">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Product Brand</mat-label>
-    <input matInput placeholder="Enter the product's brand">
+    <input matInput placeholder="Enter the product's brand" [(ngModel)]="product.brand">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Product Description</mat-label>
-    <input matInput placeholder="Enter a description of the product">
+    <input matInput placeholder="Enter a description of the product" [(ngModel)]="product.description">
   </mat-form-field>
 </div>
 
@@ -24,7 +24,7 @@
 </div>
 
 <div *ngIf="toDisplay">
-  <button mat-raised-button color="warn" (click)="addProduct()">Submit</button>
+  <button mat-raised-button color="warn" (click)="addProduct();show()">Submit</button>
   <button mat-raised-button color="warn" (click)="show()">Close</button>
 </div>
 
