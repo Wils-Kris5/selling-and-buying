@@ -15,7 +15,7 @@ export class RoutingService {
   gotoDashboard() {
     this.router.navigate(['dashboard']);
   }
-  
+
   gotoSignup() {
     this.router.navigate(['signup'])
   }
@@ -23,5 +23,9 @@ export class RoutingService {
   gotoProducts() {
     this.router.navigate(['products']);
   }
-  
+
+  gotoCart() {
+    this.router.navigate(['cart']);
+  }
+
 }
