@@ -27,5 +27,6 @@ export class RoutingService {
   gotoCart() {
     this.router.navigate(['cart']);
   }
+  
 
 }

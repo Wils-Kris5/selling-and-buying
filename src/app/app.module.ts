@@ -8,12 +8,14 @@ import { SignupComponent } from './signup/signup.component';
 import { ProductsComponent } from './products/products.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { RouterModule, Routes } from '@angular/router';
 import {CanactivateGuard} from "./canactivate.guard";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -68,7 +70,8 @@ const routes: Routes = [
     DashboardComponent,
     FooterComponent,
     UserComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    
   ],
   imports: [
     BrowserModule,

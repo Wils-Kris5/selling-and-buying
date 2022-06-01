@@ -8,15 +8,15 @@
 
       <mat-card-content>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="username" [(ngModel)]="user.username">
+          <input matInput placeholder="username" name="username" [(ngModel)]="user.username">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="email" [(ngModel)]="user.email">
+          <input matInput placeholder="email" name="email" [(ngModel)]="user.email">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input type="password" matInput placeholder="password" [(ngModel)]="user.password">
+          <input type="password" name="password" matInput placeholder="password" [(ngModel)]="user.password">
         </mat-form-field>
 
       </mat-card-content>
