@@ -9,7 +9,7 @@ import {ProductService} from "../services/product.service";
 export class ProductsComponent implements OnInit {
 
   products: any[] = [];
-  toDisplay: boolean = true;
+  toDisplay: boolean = false;
 
   constructor(private productService: ProductService) { }
 
@@ -23,8 +23,14 @@ export class ProductsComponent implements OnInit {
   }
 
   show() {
-    console.log(this.toDisplay)
     this.toDisplay = !this.toDisplay;
-    console.log(this.toDisplay)
+  }
+
+  addProduct(){
+    this.productService.addNewProduct().subscribe({
+      next: (piece: any) => {
+
+      }
+    })
   }
 }

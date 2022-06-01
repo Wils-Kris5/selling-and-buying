@@ -1,6 +1,6 @@
 
 
-<div *ngIf="toDisplay">
+<div *ngIf="toDisplay" class="forms-container">
   <mat-form-field appearance="outline">
     <mat-label>Product Name</mat-label>
     <input matInput placeholder="Enter the product's name">
@@ -19,7 +19,14 @@
   </mat-form-field>
 </div>
 
-<button mat-raised-button color="warn" (click)="show()">List Item for Sale</button>
+<div *ngIf="!toDisplay">
+  <button mat-raised-button color="warn" (click)="show()">List Item for Sale</button>
+</div>
+
+<div *ngIf="toDisplay">
+  <button mat-raised-button color="warn" (click)="addProduct()">Submit</button>
+  <button mat-raised-button color="warn" (click)="show()">Close</button>
+</div>
 
 
 <div class="card-container">
