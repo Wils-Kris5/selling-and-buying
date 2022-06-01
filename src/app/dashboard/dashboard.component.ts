@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductService} from "../services/product.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -8,17 +7,9 @@ import {ProductService} from "../services/product.service";
 })
 export class DashboardComponent implements OnInit {
 
-  products: any[] = [];
-
-  constructor(private productService: ProductService) { }
+  constructor() { }
 
   ngOnInit(){
-    // this.productService.getAllProducts().subscribe({
-    //   next: (products) => {
-    //     console.log(products);
-    //     this.products=products;
-    //   }
-    // })
   }
 
 }

@@ -7,7 +7,7 @@ export class Product {
   description: string;
 
   constructor() {
-    this.id =0;
+    this.id = 0;
     this.name = "";
     this.price=0;
     this.brand="";

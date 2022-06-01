@@ -31,14 +31,16 @@ body {
 }
 
 .box {
-  position: relative;
-  top: 0;
+  position: absolute;
+  top: 30%;
+  left: 40%;
   opacity: 1;
   float: left;
+  color: black;
   padding: 60px 50px 40px 50px;
   width: 100%;
-  background: #fff;
-  border-radius: 10px;
+  background: whitesmoke;
+  border-radius: 20px;
   transform: scale(1);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -105,4 +107,8 @@ body {
 
 .main-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
   padding: 0.8375em 0;
+}
+
+.example-form{
+  background-color: slategray;
 }

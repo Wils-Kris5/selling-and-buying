@@ -1,20 +1,43 @@
 .card-container{
-  margin-top: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
- flex-shrink: inherit;
+  margin-top: 15px;
+  /*display: flex;*/
+  /*flex-flow: row wrap;*/
+  height: 100%;
+  width: 100%;
+  /*justify-content: space-around;*/
+  display: grid;
+  grid:
+  'item . . . .';
+  grid-gap: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.grid-brand{grid-area: brand}
+.grid-button{grid-area: btn}
+.grid-description{grid-area: desc}
+.grid-price{grid-area: price}
+.grid-title{grid-area: title}
+.grid-picture{grid-area: pic}
+
+.grid-container{
+  display: grid;
+  width: 150px;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 15px 15px 15px 15px;
+  grid:
+  'pic  pic title title price . . . . '
+  'pic  pic  brand brand btn  . . . . '
+  'desc desc desc  desc  desc . . . . '
 }
 
 .description-container{
-  display: flex;
-  word-break: break-word;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  grid-area: item;
+  /*word-break: break-word;*/
   text-overflow: ellipsis;
   width: 250px;
+  max-height: 125px;
 }
 
 .forms-container{

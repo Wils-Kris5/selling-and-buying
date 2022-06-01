@@ -21,6 +21,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
 import { FooterComponent } from './footer/footer.component';
+import {CartComponent} from "./cart/cart.component";
+import { UserComponent } from './user/user.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 const routes: Routes = [
   {
@@ -40,7 +43,11 @@ const routes: Routes = [
   {
     path: 'products',
     component:ProductsComponent,
-    children:[],
+    children:[]
+  },
+  {
+    path: 'cart',
+    component:CartComponent,
     canActivate:[CanactivateGuard]
   },
   {
@@ -58,7 +65,9 @@ const routes: Routes = [
     ProductsComponent,
     HeaderComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    UserComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +79,6 @@ const routes: Routes = [
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    // step 2
     RouterModule.forRoot(routes),
     MatDialogModule,
     MatCardModule,

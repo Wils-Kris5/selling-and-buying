@@ -20,6 +20,7 @@
 </div>
 
 <div *ngIf="!toDisplay">
+  <p>{{this.errorMessage}}</p>
   <button mat-raised-button color="warn" (click)="show()">List Item for Sale</button>
 </div>
 
@@ -29,29 +30,36 @@
 </div>
 
 
+<!--    <div class="grid-container">-->
+<!--    <div class="grid-title">{{product.name}}</div>-->
+<!--    <div class="grid-price">{{product.price}}</div>-->
+<!--    <div class="grid-brand">{{product.brand}}</div>-->
+<!--    <div class="grid-description">This is product {{product.id}}, described as {{product.description}}</div>-->
+<!--    <div class="grid-button">-->
+<!--      <button mat-raised-button color="accent" (click)="moveToCart(this.product)">Add to Cart</button>-->
+<!--    </div>-->
+
 <div class="card-container">
   <a *ngFor="let product of products">
-  <mat-card>
-
+  <mat-card class="product-card" (click)="updateProduct(product)">
     <mat-card-header>
       <mat-card-title>
         {{product.name}}
       </mat-card-title>
-
       <mat-card-subtitle>
         ${{product.price}}
-        <a class="button-container">
+        <div class="button-container">
           <p>{{product.brand}}</p>
           <mat-card-actions>
-            <button mat-raised-button color="accent">Add to Cart</button>
+            <button mat-raised-button color="accent" (click)="moveToCart(this.product)">Add to Cart</button>
           </mat-card-actions>
-        </a>
+        </div>
       </mat-card-subtitle>
     </mat-card-header>
 
     <div class="description-container">
       <mat-card-content>
-        <p>{{product.description}}</p>
+        <p>This is item id {{product.id}}, {{product.description}}</p>
       </mat-card-content>
     </div>
 
