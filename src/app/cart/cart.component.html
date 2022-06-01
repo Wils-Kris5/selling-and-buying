@@ -1,1 +1,27 @@
-<p>cart works!</p>
+<div class="card-container">
+  <a *ngFor="let product of products">
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-card-title>
+          {{product.name}}
+        </mat-card-title>
+        <mat-card-subtitle>
+          ${{product.price}}
+          <div class="button-container">
+            <p>{{product.brand}}</p>
+            <mat-card-actions>
+              <button mat-raised-button color="accent" (click)="removeFromCart(this.product)">Remove</button>
+            </mat-card-actions>
+          </div>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <div class="description-container">
+        <mat-card-content>
+          <p>This is item id {{product.id}}, {{product.description}}</p>
+        </mat-card-content>
+      </div>
+
+    </mat-card>
+  </a>
+</div>

@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     let user = {username:this.username, password:this.password};
     this.authService.authenticateUser(user).subscribe({
       next:(response)=>{
+        console.log(response);
         this.authService.setToken(response['token']);
         this.routeService.gotoDashboard();
       },

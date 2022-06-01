@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {ProductService} from "../services/product.service";
 import {Product} from "./product";
 import {CartService} from "../services/cart.service";
-import {MatDialog} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {UpdateProductComponent} from "../update-product/update-product.component";
 import {CartComponent} from "../cart/cart.component";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-products',
@@ -27,7 +28,7 @@ export class ProductsComponent implements OnInit {
       next: (products) => {
         this.count = products.length;
         this.products=products;
-        console.log(this.count)
+        console.log(this.count);
       }
     })
   }
@@ -52,17 +53,23 @@ export class ProductsComponent implements OnInit {
     }
   }
 
-  moveToCart(product: Product) {
-    this.dialog.open(CartComponent,
-      {data: product})
-    this.cartService.addToCart(product)
+  viewProduct(){
+      this.dialog.open(ProductsComponent,{
+        width:'250px',
+        data:this.product})
+    }
 
+
+  moveToCart(product: Product) {
+    console.log(product)
+    this.productService.moveToCart(product)
   }
 
   updateProduct(productUpdate: Product){
     let productCopy = Object.assign({},productUpdate)
     this.dialog.open(UpdateProductComponent,{
       width:'250px',
-    data: productCopy}).afterClosed().subscribe(()=> this.ngOnInit())
+      data: productCopy}).afterClosed().subscribe(()=> this.ngOnInit())
   }
+
 }

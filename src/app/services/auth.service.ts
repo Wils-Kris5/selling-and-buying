@@ -10,13 +10,13 @@ export class AuthService {
   constructor(private httpClient: HttpClient) { }
 
   authenticateUser(user:any): Observable<any>{
-    return this.httpClient.post<any>("http://localhost:3000/auth/v1",user);
+    return this.httpClient.post<any>("http://localhost:8090/api/v1/users/login",user);
   }
 
   isUserAuthenticated(token:any): Observable<any>{
 
     return this.httpClient.post<any>
-    ("http://localhost:3000/auth/v1/isAuthenticated",
+    ("http://localhost:8090/api/v1/users/isAuthenticated",
       {},
       {headers:new HttpHeaders().set("Authorization","Bearer "+token)}
     )

@@ -7,12 +7,20 @@
     <form class="example-form">
 
       <mat-card-content>
+        <p>
+          {{errorMessage}}
+        </p>
+        <p>
+          {{message}}
+        </p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="firstName" name="firstName" [(ngModel)]="user.firstName">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="lastName" name="lastName" [(ngModel)]="user.lastName">
+        </mat-form-field>
         <mat-form-field class="example-full-width">
           <input matInput placeholder="username" name="username" [(ngModel)]="user.username">
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="email" name="email" [(ngModel)]="user.email">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
@@ -21,7 +29,7 @@
 
       </mat-card-content>
 
-      <button mat-stroked-button color="accent" class="btn-block">Sign-Up</button>
+      <button mat-stroked-button color="accent" (click)="registerUser()" class="btn-block">Sign-Up</button>
 
     </form>
   </mat-card>
